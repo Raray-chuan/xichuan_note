@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "dev": "docsify serve --open",
+    "convert": "docsify-pdf-converter"
+  },
+  "name": "advanced-java",
+  "description": "xichuan的笔记",
+  "version": "1.0.0",
+  "main": ".docsifytopdfrc.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raray-chuan/xichuan_note.git"
+  },
+  "author": "xichuan",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/Raray-chuan/xichuan_note/issues"
+  },
+  "homepage": "https://github.com/Raray-chuan/xichuan_note#readme",
+  "devDependencies": {
+    "docsify-pdf-converter": "^2.0.7"
+  }
+}
