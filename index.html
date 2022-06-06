@@ -30,7 +30,7 @@
       <li>
         分类
         <ul>
-          <li><a href="#/?id=Java">java</a></li>
+          <li><a href="#/?id=Java">Java</a></li>
           <li><a href="#/?id=JVM">JVM</a></li>
         </ul>
       </li>
@@ -73,8 +73,8 @@
       search: {
         maxAge: 1800000,
         paths: [
-          "/docs/Java/",
-          "/docs/JVM/",
+          "/docs/java/",
+          "/docs/jvm/",
         ],
         depth: 3,
       },
@@ -111,8 +111,8 @@
             const gitee = `[Gitee](${url.replace("github", "gitee")})`;
 
             const editHtml = en
-              ? `:memo: Edit on ${github} / ${gitee}\n`
-              : `:memo: 在 ${github} / ${gitee} 编辑\n`;
+              ? `:memo: Edit on ${github} \n`
+              : `:memo: 在 ${github}  编辑\n`;
 
             if (vm.route.path == "/") {
               return editHtml + content;
@@ -122,7 +122,7 @@
 
 [Raray-chuan](https://github.com/Raray-chuan) xichuan的个人笔记
 
-我的公众号：「** 大数据之秬鬯**」
+我的公众号：「**大数据之秬鬯**」
 
 <table>
     <tr>
@@ -132,7 +132,6 @@
           <sub>公众平台</sub>
         </a><br>
       </td>
-
     </tr>
 </table>
             `;

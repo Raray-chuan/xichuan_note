@@ -1,6 +1,6 @@
 - Xichuan笔记
 
-  - [Java](/docs/java/java-interview.md)
+  - [Java](/docs/java/java-introduction.md)
 
     - [测试](/docs/java/test.md)
 

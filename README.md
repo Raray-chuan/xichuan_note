@@ -7,3 +7,44 @@
 
 - GitHub Pages: https://Raray-chuan.github.io/xichuan_note
 
+
+
+## Xichuan笔记
+
+### [Java](/docs/java/java-introduction.md)
+
+- [测试](/docs/java/test.md)
+
+
+### [JVM](/docs/jvm/jvm-introduction.md)
+
+- [测试](/docs/jvm/test.md)
+
+
+
+
+
+
+
+
+
+
+
+
+## 公众号
+
+[Raray-chuan](https://github.com/Raray-chuan) xichuan的个人笔记
+
+我的公众号：「**大数据之秬鬯**」
+
+<table>
+    <tr>
+      <td align="center" style="width: 200px;">
+        <a href="https://github.com/Raray-chuan">
+          <img src="./images/qrcode-for-xichuan.jpg" style="width: 400px;"><br>
+          <sub>公众平台</sub>
+        </a><br>
+      </td>
+    </tr>
+</table>
+
