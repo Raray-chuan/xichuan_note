@@ -2,8 +2,11 @@
 
 [![stars](https://img.shields.io/github/stars/Raray-chuan/xichuan_note?color=42b883&logo=github&style=flat-square&logoColor=ffffff)](https://github.com/Raray-chuan/xichuan_note/stargazers)
 [![forks](https://img.shields.io/github/forks/Raray-chuan/xichuan_note?color=42b883&logo=github&style=flat-square&logoColor=ffffff)](https://github.com/Raray-chuan/xichuan_note/network/members)
-[![discord-chat](https://img.shields.io/discord/901805669529825301.svg?logo=discord&color=42b883&style=flat-square&logoColor=ffffff)](https://discord.gg/qUFwPPEYEy)
-
+[![forks](https://img.shields.io/github/issues/Raray-chuan/xichuan_note?color=42b883&logo=github&style=flat-square&logoColor=ffffff)](https://github.com/Raray-chuan/xichuan_note/issues)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Raray-chuan/xichuan_note/)
+<br>
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Raray-chuan&layout=compact)](https://github.com/Raray-chuan/xichuan_note)
+<br>
 
 - GitHub Pages: https://Raray-chuan.github.io/xichuan_note
 - 注: 大部分笔记都在有道笔记上，标注未完成的系列，就是还没有整理上传，注意看更新历史  
@@ -11,6 +14,8 @@
 
 
 ## xichuan-note
+
+<!-- 
 
 ### [java系列-未完成](/docs/java/java-introduction.md)
 #### [java进阶-未完成](/docs/java/java-extra-introduction.md)
@@ -110,7 +115,7 @@
 - [hadoop基础](/docs/big-data/hadoop-01.md)
 
 #### [hive-未完成](/docs/big-data/hive-introduction.md)
-- hive基础](/docs/big-data/hive-01.md)
+- [hive基础](/docs/big-data/hive-01.md)
 
 #### [hbase-未完成](/docs/big-data/hbase-introduction.md)
 - [hbase基础](/docs/big-data/hbase-01.md)
@@ -175,7 +180,7 @@
 
 
 
-
+-->
 
 
 ## 公众号
