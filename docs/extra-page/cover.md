@@ -5,4 +5,4 @@
 > 本系列知识由 xichuan总结而来，覆盖了Java与大数据的知识,希望在工作中帮助到你
 
 [github](https://github.com/Raray-chuan/xichuan_note)
-[开始学习](#Xichuan的学习总结笔记)
+[开始学习](#兮川的学习总结笔记)

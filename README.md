@@ -1,4 +1,4 @@
-# Xichuan的学习总结笔记
+# 兮川的学习总结笔记
 
 [![stars](https://img.shields.io/github/stars/Raray-chuan/xichuan_note?color=42b883&logo=github&style=flat-square&logoColor=ffffff)](https://github.com/Raray-chuan/xichuan_note/stargazers)
 [![forks](https://img.shields.io/github/forks/Raray-chuan/xichuan_note?color=42b883&logo=github&style=flat-square&logoColor=ffffff)](https://github.com/Raray-chuan/xichuan_note/network/members)
@@ -7,7 +7,7 @@
 
 - GitHub Pages: https://Raray-chuan.github.io/xichuan_note
 - 注: 大部分笔记都在有道笔记上，标注未完成的系列，就是还没有整理上传，注意看更新历史  
-- [更细记录](/docs/extra-page/push-history.md)
+- [更新记录](/docs/extra-page/push-history.md)
 
 
 ## xichuan-note
