@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Xichuan 笔记</title>
+  <title>xichuan-note</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="keywords" content="doc,docs,documentation,github,xichuan" />
-  <meta name="description" content="Xichuan的学习总结笔记" />
+  <meta name="keywords" content="doc,docs,documentation,github,xichuan,bigdata,jvm,juc,spring,java" />
+  <meta name="description" content="xichuan的学习总结笔记" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <link rel="stylesheet" href="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/npm/docsify/lib/themes/vue.css" />
@@ -30,8 +30,11 @@
       <li>
         分类
         <ul>
-          <li><a href="#/?id=java">java</a></li>
-          <li><a href="#/?id=jvm">jvm</a></li>
+          <li><a href="#/?id=java系列">java系列</a></li>
+          <li><a href="#/?id=spring系列">spring系列</a></li>
+          <li><a href="#/?id=java框架系列">java框架系列</a></li>
+          <li><a href="#/?id=大数据系列">大数据系列</a></li>
+          <li><a href="#/?id=杂项">杂项</a></li>
         </ul>
       </li>
       <li>
@@ -43,7 +46,7 @@
       </li>
     </ul>
   </nav>
-  <div id="app">Xichuan的学习总结笔记</div>
+  <div id="app">xichuan的学习总结笔记</div>
   <script>
     window.$docsify = {
       name: "xichuan-note",
@@ -74,7 +77,10 @@
         maxAge: 1800000,
         paths: [
           "/docs/java/",
-          "/docs/jvm/",
+          "/docs/spring/",
+          "/docs/java-frame/",
+          "/docs/big-data/",
+          "/docs/others/",
         ],
         depth: 3,
       },
@@ -120,9 +126,9 @@
             const subscription = `---
 ## 公众号
 
-[Raray-chuan](https://github.com/Raray-chuan) xichuan的个人笔记
+[Raray-chuan](https://github.com/Raray-chuan) : 关注我的公众号可以获取更多的学习资料
 
-我的公众号：「**大数据之秬鬯**」
+我的公众号：「**大数据秬鬯**」
 
 <table>
     <tr>
@@ -140,7 +146,7 @@
 
           hook.afterEach(function (html) {
             const currentYear = new Date().getFullYear()
-            const footer = `<footer><span>Copyright © 20122-${currentYear} <a href="https://github.com/Raray-chuan" target="_blank">Raray-chuan</a>. All Rights Reserved.</footer>`
+            const footer = `<footer><span>Copyright © 2022-${currentYear} <a href="https://github.com/Raray-chuan" target="_blank">Raray-chuan</a>. All Rights Reserved.</footer>`
             return html + footer;
           });
         },
