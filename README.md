@@ -10,6 +10,7 @@
 
 - GitHub Pages: https://Raray-chuan.github.io/xichuan_note
 - 注: 大部分笔记都在有道笔记上，标注未完成的系列，就是还没有整理上传，注意看更新历史  
+- 注: 如果图片看不到，说明你无法浏览到GitHub上的图片，可能需要科学上网才行:joy:
 - [更新记录](/docs/extra-page/push-history.md)
 
 
