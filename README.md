@@ -19,30 +19,32 @@
 
 
 ### [java系列](/docs/java/java-introduction.md)
+
 #### [java进阶](/docs/java/java-extra-introduction.md)
-- [java泛型详解](/docs/java/java泛型详解.md)
-- [java实例化的五种方式](/docs/java/java实例化的五种方式.md)
-- [NIO基础](/docs/java/NIO基础.md)
-- [ArrayList源码分析](/docs/java/ArrayList源码分析.md)
-- [LinkedList源码分析](/docs/java/LinkedList源码分析.md)
-- [HashSet和TreeSet源码分析-未完成](/docs/java/HashSet和TreeSet源码分析.md)
-- [HashMap源码分析(JDK1.8)-未完成](/docs/java/HashMap源码分析(JDK1.8).md)
+ - [java泛型详解](/docs/java/java-base/java泛型详解.md)
+ - [java实例化的五种方式](/docs/java/java-base/java实例化的五种方式.md)
+ - [NIO基础](/docs/java/java-base/NIO基础.md)
+ - [ArrayList源码分析](/docs/java/java-base/ArrayList源码分析.md)
+ - [LinkedList源码分析](/docs/java/java-base/LinkedList源码分析.md)
+ - [HashSet和TreeSet源码分析](/docs/java/java-base/HashSet和TreeSet源码分析.md)
+ - [HashMap源码分析(JDK1.8)](/docs/java/java-base/HashMap源码分析(JDK1.8).md)
+ 
+#### [juc进阶](/docs/java/juc-introduction.md)
+ - [多线程基础](/docs/java/juc/多线程基础.md)
+ - [Callable、Future和FutureTask](/docs/java/juc/Callable、Future和FutureTask.md)
+ - [线程池](/docs/java/juc/线程池.md)
+ - [DaemonThread](/docs/java/juc/DaemonThread.md)
+ - [Volatile](/docs/java/juc/Volatile.md)
+ - [Lock](/docs/java/juc/Lock.md)
+ - [阻塞队列](/docs/java/juc/阻塞队列.md)
+ - [Atomic变量](/docs/java/juc/Atomic变量.md)
+ - [CurrentHashMap、ConcurrentSkipListMap、CopyOnWriteArrayList](/docs/java/juc/CurrentHashMap、ConcurrentSkipListMap、CopyOnWriteArrayList.md)
+ - [ThreadLocal](/docs/java/juc/ThreadLocal.md)
+ - [Synchronizes：Semaphore、CountDownLatch、CyclicBarrier、Exchanger、Phaser](/docs/java/juc/Synchronizes：Semaphore、CountDownLatch、CyclicBarrier、Exchanger、Phaser.md)
+ 
+ 
  
 <!-- 
-#### [juc进阶-未完成](/docs/java/juc-introduction.md)
-- [多线程基础-未完成](/docs/java/juc-01.md)
-- [Callable、Future和FutureTask-未完成](/docs/java/juc-02.md)
-- [线程池-未完成](/docs/java/juc-03.md)
-- [Daemon Thread-未完成](/docs/java/juc-04.md)
-- [volatile-未完成](/docs/java/juc-05.md)
-- [Lock-未完成](/docs/java/juc-06.md)
-- [阻塞队列-未完成](/docs/java/juc-07.md)
-- [atomic变量-未完成](/docs/java/juc-08.md)
-- [CurrentHashMap、ConcurrentSkipListMap、CopyOnWriteArrayList-未完成](/docs/java/juc-09.md)
-- [ThreadLocal-未完成](/docs/java/jvm-10.md)
-- [Synchronizes：Semaphore、CountDownLatch、CyclicBarrier、Exchanger、Phaser-未完成](/docs/java/juc-11.md)
- 
-
 #### [jvm进阶-未完成](/docs/java/jvm-introduction.md)
 - [JVM了解-未完成](/docs/java/jvm-01.md)
 - [认识一下class文件-未完成](/docs/java/jvm-02.md)
