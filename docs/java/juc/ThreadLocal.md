@@ -2,7 +2,7 @@
 多线程访问同一个共享变量的时候容易出现并发问题，特别是多个线程对一个变量进行写入的时候，为了保证线程安全，一般使用者在访问共享变量的时候需要进行额外的同步措施才能保证线程安全性。ThreadLocal是除了加锁这种同步方式之外的一种保证一种规避多线程访问出现线程不安全的方法，当我们在创建一个变量后，如果每个线程对其进行访问的时候访问的都是线程自己的变量这样就不会存在线程不安全问题。
 　　ThreadLocal是JDK包提供的，它提供线程本地变量，如果创建一乐ThreadLocal变量，那么访问这个变量的每个线程都会有这个变量的一个副本，在实际多线程操作的时候，操作的是自己本地内存中的变量，从而规避了线程安全问题，如下图所示
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201150219.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201150219.png)
 
 
 ThreadLocal类中提供了几个方法：
@@ -85,13 +85,13 @@ after remove : null
 ## 4. ThreadLocal的实现原理
 　　下面是ThreadLocal的类图结构，从图中可知：Thread类中有两个变量threadLocals和inheritableThreadLocals，二者都是ThreadLocal内部类ThreadLocalMap类型的变量，我们通过查看内部内ThreadLocalMap可以发现实际上它类似于一个HashMap。在默认情况下，每个线程中的这两个变量都为null
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201152439.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201152439.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201153099.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201153099.png)
 
 只有当线程第一次调用ThreadLocal的set或者get方法的时候才会创建他们（后面我们会查看这两个方法的源码）。除此之外，和我所想的不同的是，每个线程的本地变量不是存放在ThreadLocal实例中，而是放在调用线程的ThreadLocals变量里面（前面也说过，该变量是Thread类的变量）。也就是说，ThreadLocal类型的本地变量是存放在具体的线程空间上，其本身相当于一个装载本地变量的工具壳，通过set方法将value添加到调用线程的threadLocals中，当调用线程调用get方法时候能够从它的threadLocals中取出变量。如果调用线程一直不终止，那么这个本地变量将会一直存放在他的threadLocals中，所以不使用本地变量的时候需要调用remove方法将threadLocals中删除不用的本地变量。下面我们通过查看ThreadLocal的set、get以及remove方法来查看ThreadLocal具体实怎样工作的
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201153301.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201153301.png)
 
 
 
@@ -181,7 +181,7 @@ public void remove() {
 
 **4、如下图所示**：每个线程内部有一个名为threadLocals的成员变量，该变量的类型为ThreadLocal.ThreadLocalMap类型（类似于一个HashMap），其中的key为当前定义的ThreadLocal变量的this引用，value为我们使用set方法设置的值。每个线程的本地变量存放在自己的本地内存变量threadLocals中，如果当前线程一直不消亡，那么这些本地变量就会一直存在（所以可能会导致内存溢出），因此使用完毕需要将其remove掉。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201154553.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201154553.png)
 
 
 
@@ -196,7 +196,7 @@ public void remove() {
 ②Memory leak:内存泄漏，程序申请内存后，无法释放已申请的内存空间，内存泄漏的堆积终将导致内存溢出。
 显然是TreadLocal在不规范使用的情况下导致了内存没有释放。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201155076.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201155076.png)
 
 红框里我们看到了一个特殊的类WeakReference，同样这个类，应用开发者也同样很少使用，这里简单介绍下吧
 
@@ -212,11 +212,11 @@ public void remove() {
 
 ①所以我们测试下弱引用的回收机制：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201156855.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201156855.png)
 
 这一种存在强引用不会被回收。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201157674.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201157674.png)
 
 
 
@@ -226,7 +226,7 @@ public void remove() {
 
 ②ThreadLocal的弱引用回收情况
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201158995.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201158995.png)
 
 
 如上图所示，我们在作为key的ThreadLocal对象没有外部强引用，下一次gc必将产生key值为null的数据，若线程没有及时结束必然出现，一条强引用链
@@ -292,13 +292,13 @@ public static void main(String[] args)
 
 然后我们借助MAT可视化分析工具，来查看对内存，分析对象实例的存活状态：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201220181.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201220181.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201221157.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201221157.png)
 
 首先打开我们工具提示我们的内存泄漏分析：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201221347.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201221347.png)
 
 
    这里我们可以确定的是ThreadLocalMap实例的Entry.value是没有被回收的。
@@ -307,9 +307,9 @@ public static void main(String[] args)
 
 
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201222137.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201222137.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206201223954.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206201223954.png)
 
 以上我们复现了ThreadLocal不正当使用，引起的内存泄漏。
 

@@ -163,13 +163,13 @@ FutureTask除了实现了Future接口外还实现了Runnable接口，因此Futur
 （2）已启动，FutureTask.run()被执行的过程中，FutureTask处于已启动状态。
 （3）已完成，FutureTask.run()方法执行完正常结束，或者被取消或者抛出异常而结束，FutureTask都处于完成状态。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206161442473.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206161442473.png)
 
 
 
 下面我们再来看看FutureTask的方法执行示意图（方法和Future接口基本是一样的，这里就不过多描述了）
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206161443618.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206161443618.png)
 
 分析：
 （1）当FutureTask处于未启动或已启动状态时，如果此时我们执行FutureTask.get()方法将导致调用线程阻塞；当FutureTask处于已完成状态时，执行FutureTask.get()方法将导致调用线程立即返回结果或者抛出异常。

@@ -16,7 +16,7 @@
 
 **为什么使用JVM**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206210958087.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206210958087.png)
 
 **字节码和机器码的区别** 
 机器码是电脑CPU直接读取运行的机器指令，运行速度最快，但是非常晦涩难懂，也比较难编写，一般 从业人员接触不到。
@@ -25,7 +25,7 @@
 
 **JDK、JRE与JVM的关系**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206210959514.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206210959514.png)
 
 
 **OracleJDK和OpenJDK 查看JDK的版本**
@@ -70,7 +70,7 @@ Oracle的项目发布经理Joe Darcy在OSCON 2011 上对两者关系的介绍也
 
 注意: 图中提示了两者共同代码的占比要远高于图形上看到的比例， 所以我们编译的OpenJDK基 本上可以认为性能、功能和执行逻辑上都和官方的Oracle JDK是一致的.
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206210959096.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206210959096.png)
 
 
 
@@ -89,7 +89,7 @@ JRockit是Oracle的JVM， 从Java SE 7开始， HotSpot和JRockit合并为一个
 
 **JVM和Java的关系**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206211000376.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206211000376.png)
 
 
 
@@ -109,7 +109,7 @@ JVM有两种运行模式：Server模式与Client模式。
 
 ## 3. JVM架构理解
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206211000006.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206211000006.png)
 
 
 
@@ -120,11 +120,11 @@ JVM有两种运行模式：Server模式与Client模式。
 **执行流程图**
 Java编译成字节码、动态编译和解释为机器码的过程分析：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206211001513.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206211001513.png)
 
 编译器和解释器的协调工作流程：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206211003241.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206211003241.png)
 
 在部分商用虚拟机中（如HotSpot），Java程序最初是通过解释器（Interpreter）进行解释执行的，当虚拟机发现某个方法或代码块的运行特别频繁时，就会把这些代码认定为“热点代码”。为了提高热点代码的执行效率，在运行时，虚拟机将会把"热点代码"编译成与本地平台相关的机器码，并进行各种层次的优化，完成这个任务的编译器称为即时编译器（Just In Time Compiler，下文统称JIT编译器）。
 
@@ -166,7 +166,7 @@ JIT编译（just-in-time compilation）狭义来说是当某段代码即将第�
 顾名思义，这个计数器用于统计方法被调用的次数。
 在JVM client模式下的阀值是1500次，Server是10 000次。可以通过虚拟机参数： -XX：CompileThreshold设置。但是JVM还存在热度衰减，时间段内调用方法的次数较少，计数器就减小。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206211003146.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206211003146.png)
 
 
 
@@ -299,7 +299,7 @@ istore 4
 
 ### 方法内联
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206211004500.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206211004500.png)
 
 在使用JIT进行即时编译时，将方法调用直接使用方法体中的代码进行替换，这就是方法内联，减少了方法调用过程中压栈与入栈的开销。同时为之后的一些优化手段提供条件。如果JVM监测到一些小方法被频繁的执行，它会把方法的调用替换成方法体本身。
 
@@ -547,14 +547,14 @@ public synchronized StringBuffer append(String str) {
 
 得到如下结果：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206211005194.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206211005194.png)
 
 使用如下命令运行程序：
 `-XX:+DoEscapeAnalysis -XX:+EliminateLocks`
 
 得到如下结果：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206211005941.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206211005941.png)
 
 
 开启锁消除：-XX:+EliminateLocks

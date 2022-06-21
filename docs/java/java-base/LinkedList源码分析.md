@@ -2,7 +2,7 @@
 ### 概述
 LinkedList也是我们经常使用的集合，本文就LinkedList的几个主要方法展开介绍，并结合几个图片来介绍几个重要操作。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151745243.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151745243.png)
 
 
 
@@ -39,7 +39,7 @@ private static class Node<E> {
 ```
 基本数据结构图如下：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151745258.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151745258.png)
 
 
 
@@ -238,7 +238,7 @@ public void clear() {
 
 **过程如图所示**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151746289.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151746289.png)
 
 
 
@@ -272,7 +272,7 @@ void linkBefore(E e, Node<E> succ) {
 
 **过程如图所示**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151747408.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151747408.png)
 
 
 
@@ -322,7 +322,7 @@ E unlink(Node<E> x) {
 
 **过程如图所示**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151749290.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151749290.png)
 
 
 

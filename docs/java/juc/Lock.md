@@ -674,7 +674,7 @@ park 的重载方法 park(Object blocker)，会传入一个blocker对象，所�
 在没有Lock之前，我们使用synchronized来控制同步，配合Object的wait()、wait(long timeout)、notify()、以及notifyAll 等方法可以实现等待/通知模式。
 Condition接口也提供了类似于Object的监听器方法、与Lock接口配合可以实现等待/通知模式，但是两者还是有很大区别的，下图是两者的对比：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206171401667.jpeg)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206171401667.jpeg)
 
 Condition 将 Object 监视器方法（wait、notify 和 notifyAll）分解成截然不同的对象，以便通过将这些对象与任意 Lock 实现组合使用，为每个对象提供多个等待 set（wait-set）。其中，Lock 替代了 synchronized 方法和语句的使用，Condition 替代了 Object 监视器方法的使用。
 
@@ -1094,7 +1094,7 @@ class MyClass {
 而对于ReentrantLock和ReentrantReadWriteLock，它默认情况下是非公平锁，但是可以设置为公平锁。
 
 看一下这2个类的源代码就清楚了：
-　　![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206171402732.jpeg)
+　　![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206171402732.jpeg)
 
 在ReentrantLock中定义了2个静态内部类，一个是NotFairSync，一个是FairSync，分别用来实现非公平锁和公平锁。
 
@@ -1105,7 +1105,7 @@ class MyClass {
 
 如果参数为true表示为公平锁，为fasle为非公平锁。默认情况下，如果使用无参构造器，则是非公平锁。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206171403267.jpeg)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206171403267.jpeg)
 
 ```
 　　另外在ReentrantLock类中定义了很多方法，比如：

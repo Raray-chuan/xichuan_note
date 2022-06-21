@@ -1,7 +1,7 @@
 ### 概述
 ArrayList 是 java 集合框架中比较常用的数据结构了。继承自 AbstractList，实现了 List 接口。底层基于数组实现容量大小动态变化。允许 null 的存在。同时还实现了 RandomAccess、Cloneable、Serializable 接口，所以ArrayList 是支持快速访问、复制、序列化的。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151727520.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151727520.png)
 
 
 
@@ -37,7 +37,7 @@ public ArrayList() {
 ```
 一些基本属性，参考下图理解。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151727198.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151727198.png)
 
 
 
@@ -127,7 +127,7 @@ public void add(int index, E element) {
 
 add(int index, E element)的过程如下图所示。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151728631.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151728631.png)
 
 
 
@@ -222,7 +222,7 @@ private void fastRemove(int index) {
 
 #### remove(int index)方法的过程如下图所示。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151729969.jpeg)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151729969.jpeg)
 
 
 
@@ -315,7 +315,7 @@ private static int hugeCapacity(int minCapacity) {
 
 **grow(int minCapacity)的过程如下图所示。**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151730959.jpeg)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151730959.jpeg)
 
 
 
@@ -442,7 +442,7 @@ System.out.println("删除后："+list.toString());
 **【出错原因分析】**：
 要顺序删除ArrayList的全部节点，如果我们从前往后的顺序删除，先删除【0】位置的数据，但是由于删除的时候是从后往前挪一位进行删除的，所以【0】的位置又会被下一个位置的数据覆盖上，实际上【0】还是有数据的。再画一张图来方便大家理解：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151731551.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151731551.png)
 
 **【正确的做法】**：
 要想顺序删除ArrayList的所有节点，且采用普通的for循环，那只能从后往前删，这样就不会出问题。

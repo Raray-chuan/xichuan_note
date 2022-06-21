@@ -14,7 +14,7 @@ Java New IO是从Java1.4版本开始引入的一个新的IO api，可以替代�
 以下用图来简单理解一下，在传统IO中当App要对网络，磁盘中的文件进行读写的时候，它们必须建立一个连接，流到底是一个什么样的概念呢，我们可以先把它想象成自来水，家里要用自来水，需要有水管，让水从水管过来到家里，起到一个运输的作用。
 
 所以当我们文件中的数据需要输入到App里面时，它们就会建立一个输入的管道。而当我们的App有数据需要写入到文件系统的时候，就会建立一个输出的管道，这两条管道就是我们的输入流和输出流。那水从来没有逆流而上的呀，所以它们都是单向管道。这么一讲，是不是就很好懂了呢😁？
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151554588.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151554588.png)
 
 
 
@@ -23,7 +23,7 @@ Java New IO是从Java1.4版本开始引入的一个新的IO api，可以替代�
 
 #### 1.1.2 NIO
 也是同样的文件系统和App，不过此时把流换成了一个channel，现在我们可以先认为它就是一条铁道，那我们知道铁道本身是不能传递货物的呀，所以我们需要一个载具---火车（也就是缓冲区），App需要的数据就由这个名叫缓冲区的载具运输过来。那火车是可以开过来，也可以开回去的，所以NIO是双向传输的。
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151605523.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151605523.png)
 
 
 
@@ -56,13 +56,13 @@ public class BufferTest {
 public abstract class ByteBuffer extends Buffer implements Comparable<ByteBuffer>
 ```
 此时继续点进去Buffer类，第一眼看到的是有几个自带的属性
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151608558.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151608558.png)
 
 
 
 
 #### 1.2.1 buffer的基本属性
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151609164.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151609164.png)
 
 ① capacity容量
 表示Buffer的最大数据容量，这个值不能为负。而且创建后是不能更改的。
@@ -82,11 +82,11 @@ mark是一个索引，通过Buffer的mark()方法指定Buffer中一个特定的p
 
 #### 1.2.2 code部分（非常简单）
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151641663.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151641663.png)
 
 **1.首先我们创建一个缓冲区对象，然后把它的属性打印出来** 
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151642838.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151642838.png)
 
 ```
 ByteBuffer byteBuffer = ByteBuffer.allocate(10);
@@ -99,7 +99,7 @@ System.out.println(byteBuffer.limit());
 
 **2.执行一个put()方法，来把一个字符丢进去**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151643829.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151643829.png)
 
 ```
 String str = "abcde";
@@ -114,7 +114,7 @@ System.out.println(byteBuffer.limit());
 
 **3.使用flip()切换为读模式**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151643189.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151643189.png)
 
 ```
 byteBuffer.flip();
@@ -167,7 +167,7 @@ rewind()方法，可重复读，clear()清空缓冲区，不过这个方法的�
 
 **① 非直接缓冲区**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151644205.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151644205.png)
 
 应用程序想要在磁盘中读取数据时，首先它发起请求，让物理磁盘先把它的数据读到内核地址空间当中，之后这个内核空间再将这个数据copy一份到用户地址空间去。然后数据才能通过read()方法将数据返回个应用程序。而应用程序需要写数据进去，也是同理，先写到用户地址空间，然后copy到内核地址空间，再写入磁盘。此时不难发现，这个copy的操作显得十分的多余，所以非直接缓冲区的效率相对来说会低一些。
 
@@ -175,7 +175,7 @@ rewind()方法，可重复读，clear()清空缓冲区，不过这个方法的�
 
 **② 直接缓冲区**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151645809.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151645809.png)
 
 直接缓冲区就真的顾名思义非常直接了，写入的时候，写到物理内存映射文件中，再由它写入物理磁盘，读取也是磁盘把数据读到这个文件然后再由它读取到应用程序中即可。没有了copy的中间过程。
 
@@ -191,15 +191,15 @@ rewind()方法，可重复读，clear()清空缓冲区，不过这个方法的�
 
 传统的IO由cpu来全权负责，此时这个设计在有大量文件读取操作时，CPU的利用率会被拉的非常低，因为IO操作把CPU的资源都抢占了。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151646111.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151646111.png)
 
 在这种背景下进行了一些优化，把对cpu的连接取消，转为[DMA(直接内存存取)](https://baike.baidu.com/item/DMA/2385376?fr=aladdin)的方式。当然DMA这个操作本身也是需要CPU进行调度的。不过这个损耗自然就会比大量的IO要小的多。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151647799.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151647799.png)
 
 此时，就出现了通道这个概念，它是一个完全独立的处理器。专门用来负责文件的IO操作。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151647732.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151647732.png)
 
 
 
@@ -229,7 +229,7 @@ ServerSocket
 
 #### 1.3.3 常用方法和简单使用
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151648033.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151648033.png)
 
 **① 使用非直接缓冲区完成文件复制**
 ```
@@ -268,7 +268,7 @@ fileOutputStream.close();
 
 **② 使用直接缓冲区来完成文件的复制**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151649602.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151649602.png)
 
 注意这里的StandardOpenOption是一个枚举，表示模式，很显然这里是要选择READ读取模式。
 
@@ -379,11 +379,11 @@ outChannel.close();
 byteBuffer.clear();
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151650679.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151650679.png)
 
 然后再当我们的客户端运行起来，就会进行copy操作
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151651925.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151651925.png)
 
 
 
@@ -396,7 +396,7 @@ channel：java.nio.channels.Channel接口，SocketChannel，ServerSocketChannel�
 buffer：负责存储数据
 Selector：其中Selector是SelectableChannel的多路复用器，主要是用于监控SelectableChannel的IO状态
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151652247.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151652247.png)
 
 #### 2.3.1 client（非阻塞）
 
@@ -501,7 +501,7 @@ while (selector.select() > 0){
 
 而关于这个selectionKey，它表示着SelectableChannel和Selectr之间的注册关系。它也有一系列对应的方法
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151659683.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151659683.png)
 
 
 
@@ -547,7 +547,7 @@ sChannel.close();
 ### 2.4 Pipe管道
 Java NIO中的管道是两个线程之间的单向数据连接，Pipe有一个source管道和一个sink管道，数据会被写到sink，从source中获取
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206151700211.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206151700211.png)
 
 ```
 // 1.获取管道

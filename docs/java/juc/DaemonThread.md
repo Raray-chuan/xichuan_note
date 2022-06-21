@@ -65,7 +65,7 @@ public class TestDemo2 {
 ## 1.3 守护线程的应用场景
 前面说了那么多，那么Daemon Thread的实际应用在那里呢？举个例子，Web服务器中的Servlet，在容器启动时，后台都会初始化一个服务线程，即调度线程，负责处理http请求，然后每个请求过来，调度线程就会从线程池中取出一个工作者线程来处理该请求，从而实现并发控制的目的。也就是说，一个实际应用在Java的线程池中的调度线程。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202206171143376.png)
+![](https://raray-chuan.github.io/xichuan_blog_pic/img/202206171143376.png)
 
 
 
