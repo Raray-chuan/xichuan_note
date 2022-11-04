@@ -1,4 +1,4 @@
-## 大数据系列
+## kerberos
 
 #### [kerberos](/docs/big-data/kerberos-introduction.md)
 - [CDH6.3.2集成Kerberos](/docs/big-data/kerberos/CDH6.3.2集成Kerberos.md)
