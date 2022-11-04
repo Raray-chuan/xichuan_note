@@ -83,7 +83,7 @@ select * from test_xichuan_db.test_xichuan_table;
 
 ## 3.项目说明
 
-此项目是一个很简单的springboot的demo项目，项目结构以及每个注解就不详细说了，而且项目中是通过principal+keytab的方式进行认证的，Kerberos如何使用，请参考:
+此项目是一个很简单的springboot的demo项目，项目结构以及每个注解就不详细说了，而且项目中是通过principal+keytab的方式进行认证的，Kerberos如何使用，请参考:https://raray-chuan.github.io/xichuan_note/#/docs/big-data/kerberos/CDH6.3.2集成Kerberos
 
 
 
