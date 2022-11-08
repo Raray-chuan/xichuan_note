@@ -3,6 +3,8 @@
 [![stars](https://img.shields.io/github/stars/Raray-chuan/xichuan_note?color=42b883&logo=github&style=flat-square&logoColor=ffffff)](https://github.com/Raray-chuan/xichuan_note/stargazers)
 [![forks](https://img.shields.io/github/forks/Raray-chuan/xichuan_note?color=42b883&logo=github&style=flat-square&logoColor=ffffff)](https://github.com/Raray-chuan/xichuan_note/network/members)
 [![forks](https://img.shields.io/github/issues/Raray-chuan/xichuan_note?color=42b883&logo=github&style=flat-square&logoColor=ffffff)](https://github.com/Raray-chuan/xichuan_note/issues)
+<a href="https://blog.csdn.net/zc_ad/"><img src="https://img.shields.io/badge/CSDN-博客-blue"/></a>
+<a href="https://space.bilibili.com/276402816/"><img src="https://img.shields.io/badge/bilibili-哔哩哔哩-ff69b4"/></a>
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Raray-chuan/xichuan_note/)
 <br>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Raray-chuan&layout=compact)](https://github.com/Raray-chuan/xichuan_note)
