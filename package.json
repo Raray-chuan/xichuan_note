@@ -3,7 +3,7 @@
     "dev": "docsify serve --open",
     "convert": "docsify-pdf-converter"
   },
-  "name": "advanced-java",
+  "name": "xichuan_note",
   "description": "xichuan的笔记",
   "version": "1.0.0",
   "main": ".docsifytopdfrc.js",
