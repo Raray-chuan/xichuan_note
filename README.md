@@ -214,15 +214,15 @@
     <tr>
       <td align="center" style="width: 200px;">
         <a href="https://github.com/Raray-chuan">
-           <!--<img src="./images/qrcode-for-xichuan.jpg" style="width: 400px;"><br>-->
-          <img src="https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/inner/qrcode-for-xichuan.jpg" style="width: 400px;"><br>
+           <!--<img src="./images/qrcode-for-xichuan.jpg" style="width: 180px;"><br>-->
+          <img src="https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/inner/qrcode-for-xichuan.jpg" style="width: 180px;"><br>
           <sub>公众平台</sub>
         </a><br>
       </td>
       <td align="center" style="width: 200px;">
         <a href="https://github.com/Raray-chuan">
-          <!--<img src="./images/qrcode-for-it_fushang.jpg" style="width: 400px;"><br>-->
-          <img src="https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/inner/qrcode-for-it_fushang.jpg" style="width: 400px;"><br>
+          <!--<img src="./images/qrcode-for-it_fushang.jpg" style="width: 180px;"><br>-->
+          <img src="https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/inner/qrcode-for-it_fushang.jpg" style="width: 180px;"><br>
           <sub>个人微信</sub>
         </a><br>
       </td>
