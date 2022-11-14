@@ -1,6 +1,4 @@
 ## juc系列
-
-#### [juc进阶](/docs/java/juc-introduction.md)
 - [多线程基础](/docs/java/juc/多线程基础.md)
 - [Callable、Future和FutureTask](/docs/java/juc/Callable、Future和FutureTask.md)
 - [线程池](/docs/java/juc/线程池.md)

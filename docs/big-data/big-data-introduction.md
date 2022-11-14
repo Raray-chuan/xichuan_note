@@ -5,3 +5,7 @@
 - [CDH6.3.2集成Kerberos](/docs/big-data/kerberos/CDH6.3.2集成Kerberos.md)
 - [HikariCP源码修改,使其连接池支持Kerberos认证](/docs/big-data/kerberos/HikariCP源码修改,使其连接池支持Kerberos认证.md)
 - [Springboot使用hikari连接池进行Kerberos认证访问Impala](/docs/big-data/kerberos/Springboot使用hikari连接池进行Kerberos认证访问Impala.md)
+
+
+#### [impala](/docs/big-data/impala-introduction.md)
+- [haproxy实现impala的负载均衡](/docs/big-data/impala/haproxy实现impala的负载均衡.md)

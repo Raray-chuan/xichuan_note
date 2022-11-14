@@ -20,7 +20,7 @@
 
 
 
-### [java系列](/docs/java/java-introduction.md)
+### [1.java系列](/docs/java/java-introduction.md)
 
 #### [java进阶](/docs/java/java-extra-introduction.md)
 - [java泛型详解](/docs/java/java-base/java泛型详解.md)
@@ -67,7 +67,7 @@
 
 
 
-### [大数据系列](/docs/big-data/big-data-introduction.md)
+### [3.大数据系列](/docs/big-data/big-data-introduction.md)
 
 #### [kerberos](/docs/big-data/kerberos-introduction.md)
 - [Kerberos基础](/docs/big-data/kerberos/Kerberos基础.md)
@@ -75,6 +75,8 @@
 - [HikariCP源码修改,使其连接池支持Kerberos认证](/docs/big-data/kerberos/HikariCP源码修改,使其连接池支持Kerberos认证.md)
 - [Springboot使用hikari连接池进行Kerberos认证访问Impala](/docs/big-data/kerberos/Springboot使用hikari连接池进行Kerberos认证访问Impala.md)
 
+#### [impala](/docs/big-data/impala-introduction.md)
+- [haproxy实现impala的负载均衡](/docs/big-data/impala/haproxy实现impala的负载均衡.md)
 
 
 

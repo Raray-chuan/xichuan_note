@@ -1,6 +1,4 @@
 ## java进阶系列
-
-#### [java进阶](/docs/java/java-extra-introduction.md)
 - [java泛型详解](/docs/java/java-base/java泛型详解.md)
 - [java实例化的五种方式](/docs/java/java-base/java实例化的五种方式.md)
 - [nio基础](/docs/java/java-base/NIO基础.md)

@@ -1,7 +1,4 @@
 ## jvm系列
-
-
-#### [jvm进阶](/docs/java/jvm-introduction.md)
 - [JVM了解](/docs/java/jvm/JVM了解.md)
 - [认识一下class文件](/docs/java/jvm/认识一下class文件.md)
 - [看清类加载过程](/docs/java/jvm/看清类加载过程.md)
