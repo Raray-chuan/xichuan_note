@@ -20,7 +20,7 @@
 
 
 
-### [1.java系列](/docs/java/java-introduction.md)
+### [java系列](/docs/java/java-introduction.md)
 
 #### [java进阶](/docs/java/java-extra/java-extra-introduction.md)
 - [java泛型详解](/docs/java/java-extra/java泛型详解.md)
@@ -62,13 +62,13 @@
 - [JVM参数调优](/docs/java/jvm/JVM参数调优.md)
 
 
-### 2.Spring系列
+### spring系列
 
 
-### 3.Java其他框架
+### java框架系列
 
 
-### [4.大数据系列](/docs/big-data/big-data-introduction.md)
+### [大数据系列](/docs/big-data/big-data-introduction.md)
 
 #### [hive](/docs/big-data/hive/hive-introduction.md)
 - [Hive安装部署](/docs/big-data/hive/Hive安装部署.md)
@@ -89,6 +89,7 @@
 
 
 
+### 杂项
 
 
 
