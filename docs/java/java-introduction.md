@@ -1,4 +1,4 @@
-## java系列
+## Java系列
 
 #### [java进阶](/docs/java/java-extra/java-extra-introduction.md)
 - [java泛型详解](/docs/java/java-extra/java泛型详解.md)
