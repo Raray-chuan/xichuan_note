@@ -1,6 +1,9 @@
 ## 大数据系列
 
-## [hive](/docs/big-data/hive/hive-introduction.md)
+#### [scala](/docs/big-data/scala/scala-introduction.md)
+- [scala基础](/docs/big-data/scala/scala基础.md)
+
+#### [hive](/docs/big-data/hive/hive-introduction.md)
 - [Hive安装部署](/docs/big-data/hive/Hive安装部署.md)
 - [Hive基础与DDL操作](/docs/big-data/hive/Hive基础与DDL操作.md)
 - [hive的DQL和DML操作](/docs/big-data/hive/hive的DQL和DML操作.md)

@@ -1,4 +1,7 @@
 ### [大数据系列](/docs/big-data/big-data-introduction.md)
+#### [scala](/docs/big-data/scala/scala-introduction.md)
+- [scala基础](/docs/big-data/scala/scala基础.md)
+
 #### [hive](/docs/big-data/hive/hive-introduction.md)
 - [Hive安装部署](/docs/big-data/hive/Hive安装部署.md)
 - [Hive基础与DDL操作](/docs/big-data/hive/Hive基础与DDL操作.md)
