@@ -69,6 +69,10 @@
     - [Hive主流文件存储格式对比](/docs/big-data/hive/Hive主流文件存储格式对比.md)
     - [Hive企业级调优](/docs/big-data/hive/Hive企业级调优.md)
 
+  - [kafka](/docs/big-data/kafka/kafka-introduction.md)
+    - [kafka详解一](/docs/big-data/kafka/kafka详解一.md)
+    - [kafka详解二](/docs/big-data/kafka/kafka详解二.md)
+
   - [kerberos](/docs/big-data/kerberos/kerberos-introduction.md)
     - [Kerberos基础](/docs/big-data/kerberos/Kerberos基础.md)
     - [CDH6.3.2集成Kerberos](/docs/big-data/kerberos/CDH6.3.2集成Kerberos.md)
@@ -80,135 +84,10 @@
 
 
 
-<!--
-
-- spring系列-未完成
-  
-  - spring基础系列-未完成
-    - [spring基础](/docs/spring/spring-base-01.md)
-
-  - spring cloud系列-未完成
-    - [spring cloud基础](/docs/spring/spring-cloud-01.md)
-
-  - 手写spring系列-未完成
-    - [手写spring基础](/docs/spring/spring-handwriting-01.md)
-
-
-
-
-
-
-- java框架系列-未完成
-
-  - redis-未完成
-    - [redis基础](/docs/java-frame/redis-01.md)
-
-  - nginx-未完成
-    - [nginx基础](/docs/java-frame/nginx-01.md)
-
-  - zookeeper-未完成
-    - [zookeeper基础](/docs/java-frame/zookeeper-01.md)
-
-  - activeMQ-未完成
-    - [activeMQ基础](/docs/java-frame/activeMQ-01.md)
-
-  - elasticSearch-未完成
-    - [elasticSearch基础](/docs/java-frame/elasticSearch-01.md)
-
-  - kettle-未完成
-    - [kettle基础](/docs/java-frame/kettle-01.md)
-
-  - zabbix-未完成
-    - [zabbix基础](/docs/java-frame/zabbix-01.md)
-
-  - jmeter-未完成
-    - [jmeter基础](/docs/java-frame/jmeter-01.md)
-
-  - grafana-未完成
-    - [grafana基础](/docs/java-frame/grafana-01.md)
-
-
-
-
-
-
-
-- 大数据系列-未完成
-
-  - scala-未完成
-    - [scala基础](/docs/big-data/scala-01.md)
-
-  - hadoop-未完成
-    - [hadoop基础](/docs/big-data/hadoop-01.md)
-
-  - hive-未完成
-    - [hive基础](/docs/big-data/hive-01.md)
-
-  - hbase-未完成
-    - [hbase基础](/docs/big-data/hbase-01.md)
-
-  - spark-未完成
-    - [spark基础](/docs/big-data/spark-01.md)
-
-  - kafka-未完成
-    - [kafka基础](/docs/big-data/kafka-01.md)
-
-  - flink-未完成
-    - [flink基础](/docs/big-data/flink-01.md)
-
-  - flume-未完成
-    - [flume基础](/docs/big-data/flume-01.md)
-
-  - sqoop-未完成
-    - [sqoop基础](/docs/big-data/sqoop-01.md)
-
-  - maxwell-未完成
-    - [maxwell基础](/docs/big-data/maxwell-01.md)
-
-  - azkaban-未完成
-    - [azkaban基础](/docs/big-data/azkaban-01.md)
-
-  - hue-未完成
-    - [hue基础](/docs/big-data/hue-01.md)
-
-  - oozie-未完成
-    - [oozie基础](/docs/big-data/oozie-01.md)
-
-  - airflow-未完成
-    - [airflow基础](/docs/big-data/airflow-01.md)
-
-  - impala-未完成
-    - [impala基础](/docs/big-data/impala-01.md)
-
-  - atlas-未完成
-    - [atlas基础](/docs/big-data/atlas-01.md)
-
-  - clickhouse-未完成
-    - [clickhouse基础](/docs/big-data/clickhouse-01.md)
-
-  - presto-未完成
-    - [presto基础](/docs/big-data/presto-01.md)
-
-  - druid-未完成
-    - [druid基础](/docs/big-data/druid-01.md)
-
-  - kylin-未完成
-    - [kylin基础](/docs/big-data/kylin-01.md)
-
-  - elk-未完成
-    - [elk基础](/docs/big-data/elk-01.md)
-
-  - kudu-未完成
-    - [kudu基础](/docs/big-data/kudu-01.md)
-
-
--->
-
 
 
 
 - 杂项
-
 
 
 

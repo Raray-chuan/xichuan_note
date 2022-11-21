@@ -90,6 +90,10 @@
 - [Hive主流文件存储格式对比](/docs/big-data/hive/Hive主流文件存储格式对比.md)
 - [Hive企业级调优](/docs/big-data/hive/Hive企业级调优.md)
 
+#### [kafka](/docs/big-data/kafka/kafka-introduction.md)
+- [kafka详解一](/docs/big-data/kafka/kafka详解一.md)
+- [kafka详解二](/docs/big-data/kafka/kafka详解二.md)
+
 #### [kerberos](/docs/big-data/kerberos/kerberos-introduction.md)
 - [Kerberos基础](/docs/big-data/kerberos/Kerberos基础.md)
 - [CDH6.3.2集成Kerberos](/docs/big-data/kerberos/CDH6.3.2集成Kerberos.md)

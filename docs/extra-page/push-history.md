@@ -1,5 +1,7 @@
 ### 更新历史
 
+- 2022-11-19 kafka详解:melon:
+
 - 2022-11-18 scala基础:banana:
 
 - 2022-11-17 手写Spring系列:pear:
