@@ -13,6 +13,7 @@
 #### [kafka](/docs/big-data/kafka/kafka-introduction.md)
 - [kafka详解一](/docs/big-data/kafka/kafka详解一.md)
 - [kafka详解二](/docs/big-data/kafka/kafka详解二.md)
+- [kafkaManager功能详解](/docs/big-data/kafka/kafkaManager功能详解.md)
 
 #### [kerberos](/docs/big-data/kerberos/kerberos-introduction.md)
 - [Kerberos基础](/docs/big-data/kerberos/Kerberos基础.md)
