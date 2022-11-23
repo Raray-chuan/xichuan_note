@@ -6,16 +6,15 @@
 <a href="https://blog.csdn.net/zc_ad/"><img src="https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_note@main/images/CSDN-博客-blue.svg"/></a>
 <a href="https://space.bilibili.com/276402816/"><img src="https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_note@main/images/bilibili-哔哩哔哩-ff69b4.svg"/></a>
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Raray-chuan/xichuan_note/)
-<br>
+
 <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raray-chuan&layout=compact" />
 <img height="150px" src="https://github-readme-streak-stats.herokuapp.com/?user=raray-chuan" />
-<br>
 
 - GitHub Pages: https://Raray-chuan.github.io/xichuan_note
 - 注: 大部分笔记都在有道笔记上，标注未完成的系列，就是还没有整理上传，注意看更新历史  
-- 注: 如果图片看不到，说明你无法浏览到GitHub上的图片，可能需要科学上网
+- 注: 如果需要学习资料，可以加我微信
 - [更新记录](/docs/extra-page/push-history.md)
-
+<hr/>
 
 ## xichuan-note
 
