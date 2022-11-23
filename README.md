@@ -253,7 +253,7 @@
       <td align="center" style="width: 200px;">
         <a href="#">
           <!--<img src="./images/qrcode-for-it_fushang.jpg" style="width: 180px;"><br>-->
-          <img src="https://raw.githubusercontent.com/Raray-chuan/xichuan_note/main/images/qrcode-for-it_fushang.jpg" style="width: 180px;"><br>
+          <img src="https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_note@main/images/qrcode-for-it_fushang.jpg" style="width: 180px;"><br>
           <sub>个人微信</sub>
         </a><br>
       </td>
