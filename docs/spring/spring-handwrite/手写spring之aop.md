@@ -331,10 +331,10 @@ public class MethodAspect {
 ```
 
 在`beforeDelegatedSet`存储的数据结构是:
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211161432319.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211161432319.png)
 
 在`aeforeDelegatedSet`存储的数据结构是:
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211161432065.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211161432065.png)
 
 这样的存储的优势是，当在实例化`StudentAopServiceImpl`的时候，我们可以很方便的找到对应的增强方法
 

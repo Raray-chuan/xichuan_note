@@ -98,8 +98,9 @@
 <table>
     <tr>
       <td align="center" style="width: 200px;">
-        <a href="https://github.com/Raray-chuan">
-          <img src="./images/qrcode-for-xichuan.jpg" style="width: 400px;"><br>
+        <a href="#">
+          <!-- <img src="./images/qrcode-for-xichuan.jpg" style="width: 400px;"><br> -->
+          <img src="https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_note@main/images/qrcode-for-xichuan.jpg"><br>
         </a><br>
       </td>
     </tr>

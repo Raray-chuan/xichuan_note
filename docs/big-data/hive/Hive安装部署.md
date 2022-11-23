@@ -201,7 +201,7 @@ export PATH=$PATH:$HIVE_HOME/bin
 show databases;
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211150951808.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211150951808.png)
 
 - 说明hive安装成功
 - 退出cli

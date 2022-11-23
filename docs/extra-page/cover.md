@@ -1,4 +1,4 @@
-[![logo](./images/icon.png)](https://github.com/Raray-chuan/xichuan_note)
+[![logo](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_note@main/images/icon.png)](https://github.com/Raray-chuan/xichuan_note)
 
 # xichuan的学习总结笔记，会不定期的更新
 

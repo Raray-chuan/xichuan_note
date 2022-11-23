@@ -13,46 +13,46 @@ CDH disable kerberos:https://www.sameerahmad.net/blog/disable-kerberos-on-CDH; h
 进入Cloudera Manager的**“管理”->“安全”**界面
 **1）选择“启用Kerberos”，进入如下界面**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211129108.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211129108.png)
 
 **2）环境确认（勾选全部）**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211131706.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211131706.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211132781.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211132781.png)
 
 **3）填写KDC配置**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211139431.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211139431.png)
 
 要注意的是：这里的 Kerberos Encryption Types 必须跟KDC实际支持的加密类型匹配（即kdc.conf中的值）
 
 **4）KRB5 信息**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211141730.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211141730.png)
 
 **5）填写主体名和密码**
 注：此处填写的主题名与密码是我们在[Kerberos基础](https://raray-chuan.github.io/xichuan_note/#/docs/big-data/kerberos/Kerberos基础) 中创建的`cloudera-scm/admin@XICHUAN.COM`用户
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211142952.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211142952.png)
 
 **6）等待导入KDC凭据完成**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211143438.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211143438.png)
 
 **7）继续**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211143692.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211143692.png)
 
 **8）重启集群**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211145091.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211145091.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211146396.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211146396.png)
 
 **9）完成**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211146415.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211146415.png)
 
 之后 Cloudera Manager 会自动重启集群服务，启动之后会提示 Kerberos 已启用。在 Cloudera Manager 上启用 Kerberos 的过程中，会自动做以下的事情：
 
@@ -302,7 +302,7 @@ ls: DestHost:destPort master01:8020 , LocalHost:localPort master01/192.xx.xx:0. 
 
 **解决办法:**
 3. 修改 Kerboeros配置文件 /etc/krb5.conf , 注释掉 : `default_ccache_name`属性 .然后执行kdestroy,重新kinit .
-4. ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041655833.png)
+4. ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041655833.png)
 
 
 
@@ -314,13 +314,13 @@ ls: DestHost:destPort master01:8020 , LocalHost:localPort master01/192.xx.xx:0. 
 
 下载地址：[https://web.mit.edu/kerberos/dist/index.html](https://links.jianshu.com/go?to=https%3A%2F%2Fweb.mit.edu%2Fkerberos%2Fdist%2Findex.html)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271555796.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271555796.png)
 
 安装过程没什么好说的，傻瓜式安装，唯一需要注意的是：
 
 安装之后不要点击重启(其实也可以，但是没必要)！不要打开软件!
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271558464.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271558464.png)
 
 
 
@@ -359,7 +359,7 @@ kfw启动时会读取`C:\ProgramData\MIT\Kerberos5\krb5.ini`的配置文件，�
 
 2.修改`C:\ProgramData\MIT\Kerberos5\krb5.ini`的配置文件
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271604092.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271604092.png)
 
 
 
@@ -369,7 +369,7 @@ dbeaver会读取我们的环境变量 $KRB5CCNAME 来获取kfw的缓存
 
 **1.在C盘创建temp文件夹**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271605779.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271605779.png)
 
 **2.增加环境变量**
 
@@ -377,7 +377,7 @@ dbeaver会读取我们的环境变量 $KRB5CCNAME 来获取kfw的缓存
 
 `KRB5_CONFIG=C:\ProgramData\MIT\Kerberos5\krb5.ini`
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271607427.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271607427.png)
 
 
 
@@ -385,17 +385,17 @@ dbeaver会读取我们的环境变量 $KRB5CCNAME 来获取kfw的缓存
 
 确认可以登陆后重启windows
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041657666.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041657666.png)
 
 重启后我们会发现这里多了个文件：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271610914.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271610914.png)
 
 
 
 **4.查看登录状态**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041658559.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041658559.png)
 
 
 
@@ -403,7 +403,7 @@ dbeaver会读取我们的环境变量 $KRB5CCNAME 来获取kfw的缓存
 
 **1.在DBeaver的安装目录下找到dbeaver.ini文件**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271615886.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271615886.png)
 
 **2.在dbeaver.ini中后面添加**
 
@@ -415,7 +415,7 @@ dbeaver会读取我们的环境变量 $KRB5CCNAME 来获取kfw的缓存
 -Dsun.security.krb5.debug=true
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271635532.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271635532.png)
 
 切记
 
@@ -429,7 +429,7 @@ dbeaver会读取我们的环境变量 $KRB5CCNAME 来获取kfw的缓存
 
 点击编辑驱动设置
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041700223.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041700223.png)
 
 
 
@@ -439,7 +439,7 @@ dbeaver会读取我们的环境变量 $KRB5CCNAME 来获取kfw的缓存
 jdbc:impala://{host}:{port}/{database};AuthMech=1;KrbRealm=XICHUAN.COM;KrbHostFQDN={host};KrbServiceName=impala;KrbAuthType=2
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210271640403.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210271640403.png)
 
 
 
@@ -453,7 +453,7 @@ impalaJDBC下载：[https://mvnrepository.com/artifact/com.cloudera/ImpalaJDBC41
 
 测试连接：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041700168.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041700168.png)
 
 OK！可以愉快的用DBeaver写sql了！
 
@@ -471,17 +471,17 @@ hdfs 开启 `Enable Kerberos Authentication for HTTP Web-Consoles`
 
 下图中的配置选项选中，使其生效
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281052048.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281052048.png)
 
 yarn开启 `Enable Kerberos Authentication for HTTP Web-Consoles`
 
 下图中的配置选项选中，使其生效
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281053585.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281053585.png)
 
 hive设置 `hive.server2.webui.use.spnego=true`
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281055596.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281055596.png)
 
 **2.重启CDH**
 
@@ -491,15 +491,15 @@ hive设置 `hive.server2.webui.use.spnego=true`
 
 访问hdfs webui
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281057131.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281057131.png)
 
 访问yarn webui
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281057407.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281057407.png)
 
 访问hive webui
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281058529.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281058529.png)
 
 
 
@@ -513,13 +513,13 @@ hive设置 `hive.server2.webui.use.spnego=true`
 `network.auth.use-sspi`：将值改为`false`；
 `network.negotiate-auth.trusted-uris`：将值为集群节点ip或主机名；
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281103844.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281103844.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281104903.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281104903.png)
 
 **2.打开kfw软件登陆**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041657666.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041657666.png)
 
 
 
@@ -527,15 +527,15 @@ hive设置 `hive.server2.webui.use.spnego=true`
 
 访问hdfs webui
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281106083.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281106083.png)
 
 访问yarn webui
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281107487.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281107487.png)
 
 访问hive webui
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210281107994.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210281107994.png)
 
 
 
@@ -716,43 +716,43 @@ public class TestKerberosImpala {
 enableSecurity取消勾选，`Enable Kerberos Authentication`取消勾选，在zoo.cfg 的`Server 高级配置代码段（安全阀`）写入`skipACL: yes`
 如下图：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211413315.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211413315.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211415868.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211415868.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211415452.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211415452.png)
 
 **3.修改HDFS配置**
 修改`hadoop.security.authentication`为`simple`，`hadoop.security.authorization`取消勾选，`dfs.datanode.address`从`1004`修改为`50010`，`dfs.datanode.http.address`从`1006`修改为`50075`，`dfs.datanode.data.dir.perm`从`700`修改为`755`。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211417117.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211417117.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211418318.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211418318.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211418032.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211418032.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211418418.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211418418.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211418829.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211418829.png)
 
 **4.修改Kudu配置**
 `enable_security`取消勾选
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211419448.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211419448.png)
 
 **5.修改Kafka配置**
 `kerberos.auth.enable`取消勾选
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211420381.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211420381.png)
 
 **6.修改HBase配置(如有此组件，进行修改)**
 `hbase.security.authentication`选择`simple`，`hbase.security.authorization`取消勾选，`hbase.thrift.security.qop`选择`none`。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211421799.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211421799.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211421178.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211421178.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211421371.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211421371.png)
 
 **7.修改Solr配置(如有此组件，进行修改)**
 `solr Secure Authentication`选择`simple`

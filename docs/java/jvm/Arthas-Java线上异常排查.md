@@ -165,7 +165,7 @@ at java.lang.Thread.run(Thread.java:748)
 
 ### 4.3 内存泄漏
 这个我们可以用dashboard命令来实时展示当前应用的多线程状态、Jvm各区域、GC情况等信息
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211110915009.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211110915009.png)
 如果内容使用率在不断上升，而且gc后也不下降，后面还发现gc越来越频繁，很可能就是内存泄漏了。
 这个时候我们可以直接用heapdump命令把内存快照dump出来，作用和jmap工具一样
 ```shell
@@ -177,7 +177,7 @@ Heap dump file created
 
 ### 4.4 JVM监控
 输入jvm，查看jvm详细的性能数据
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211110916081.jpeg)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211110916081.jpeg)
 
 ### 4.5 函数耗时监控
 通常说一个接口性能不好，其实就是接口响应时间比较长造成的，具体代码中哪个函数耗时比较长呢？可以使用trace功能来监控一下
@@ -191,7 +191,7 @@ cn.testfan.perf.beihe.pinter.http.CaseController是接口所在的类
 time是接口的入口函数
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211110917188.jpeg)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211110917188.jpeg)
 ```
 通过圈起来的部分可以看到，接口的入口函数time总耗时371ms
 其中getDataFromDb函数耗时200ms

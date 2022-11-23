@@ -67,7 +67,7 @@ OVERWRITE INTO TABLE test_xichuan_db.test_xichuan_table;
 
 
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041519082.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041519082.png)
 
 
 
@@ -77,7 +77,7 @@ OVERWRITE INTO TABLE test_xichuan_db.test_xichuan_table;
 select * from test_xichuan_db.test_xichuan_table;
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041526242.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041526242.png)
 
 
 
@@ -220,7 +220,7 @@ authentication.kerberos.keytabPath=D:\\development\\license_dll\\xichuan.keytab
 
 **1.启动项目**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041537566.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041537566.png)
 
 我们可以看出刚启动项目后，Hikari连接池已经进行了Kerberos认证，并创建了三个Connection
 
@@ -230,9 +230,9 @@ authentication.kerberos.keytabPath=D:\\development\\license_dll\\xichuan.keytab
 
 访问接口：`http://localhost:18080/lot_operation/all_data`
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041542280.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041542280.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041543639.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041543639.png)
 
 我们可以看出访问访问数据一切正常
 
@@ -242,7 +242,7 @@ authentication.kerberos.keytabPath=D:\\development\\license_dll\\xichuan.keytab
 
 我们设置的`datasource.xichuan.max-lifetime=35000`，所以每过`35秒`，`HikariPool`中的`Connection`就会失效，并重新生成新的`Connection`,我们查看日志：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041559195.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041559195.png)
 
 通过日志可以看出，`HikariPool`中的`Connection`每过35秒就会失效，但`HikariPool`会通过Kerberos认证，并创建新的`Connection`添加到`HikariPool`中。
 

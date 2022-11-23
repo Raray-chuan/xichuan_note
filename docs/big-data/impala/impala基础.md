@@ -8,7 +8,7 @@
 impala是参照谷歌的新三篇论文（Caffeine--网络搜索引擎、Pregel--分布式图计算、Dremel--交互式分析工具）当中的Dremel实现而来，其中旧三篇论文分别是（BigTable，GFS，MapReduce）分别对应我们即将学的HBase和已经学过的HDFS以及MapReduce。
 
 impala是基于hive并使用内存进行计算，兼顾数据仓库，具有实时，批处理，多并发等优点。
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221543998.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221543998.png)
 
 
 ### 1.2 impala与hive的关系
@@ -39,7 +39,7 @@ impala是基于hive并使用内存进行计算，兼顾数据仓库，具有实�
 - 稳定性不如hive
 - 每当新的记录/文件被添加到HDFS中的数据目录时，该表需要被刷新
 - 不支持用户定义函数UDF
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221536253.jpeg)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221536253.jpeg)
 
 
 
@@ -53,7 +53,7 @@ impala是基于hive并使用内存进行计算，兼顾数据仓库，具有实�
 Impala主要由Impalad、 State Store、Catalogd和CLI组成。 
 
 ### 2.1 impala体系结构
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221547639.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221547639.png)
 
 #### 2.1.1 Statestored
 impala集群的主节点
@@ -110,7 +110,7 @@ impala集群的主节点
 
 **Query executor（查询执行器）**
 - 而做查询工作的是就是executor
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221551294.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221551294.png)
 
 
 
@@ -144,7 +144,7 @@ REFRESH [table] PARTITION [partition]       //刷新某个表的某个分区
 INVALIDATE METADATA;                   //重新加载所有库中的所有表
 INVALIDATE METADATA [table]            //重新加载指定的某个表
 ```
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221552617.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221552617.png)
 
 
 
@@ -422,11 +422,11 @@ service impala-server start
 ps -ef | grep impala
 ```
 注意：启动之后所有关于impala的日志默认都在 /var/log/impala这个路径下，node1机器上面应该有二个进程，node2与node3机器上面只有一个进程，如果进程个数不对，去对应目录下查看报错日志
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221602244.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221602244.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221603682.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221603682.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221603099.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221603099.png)
 
 
 
@@ -452,11 +452,11 @@ service impala-server stop
 ## 5. impala的web管理界面
 启动好impala集群之后，可以访问web地址，查看集群相关信息
 - 访问 statestored 的管理界面http://node1:25010/
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221605047.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221605047.png)
 - 访问 catalogd 的管理界面http://node1:25020/
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221605942.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221605942.png)
 - 访问 impalad 的管理界面http://node2:25000/
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221605882.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221605882.png)
 
 
 
@@ -514,12 +514,12 @@ impala-shell -f impala-shell.sql -p
 
 **1）help**
 - 帮助文档
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221608994.png)
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221611741.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221608994.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221611741.png)
 
 **2）connect**
 - `connect  hostname` 连接到某一台机器上面去执行
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221612334.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221612334.png)
 
 **3）refresh  刷新**
 - `refresh dbname.tablename` 增量刷新，刷新某一张表的元数据，主要用于刷新hive当中数据表里面的数据改变的情况
@@ -697,7 +697,7 @@ load data local inpath '/home/hadoop/user50w.csv' into table access_user;
 ```sql
 select count(*) from access_user;
 ```
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221619660.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221619660.png)
 
 
 **4、impala-shell中同步hive的元数据**
@@ -710,7 +710,7 @@ invalidate metadata;
 ```sql
 select count(*) from access_user;
 ```
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211221622548.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211221622548.png)
 
 
 **6、order by语句**

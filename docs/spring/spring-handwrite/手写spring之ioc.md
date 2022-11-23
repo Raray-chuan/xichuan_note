@@ -15,7 +15,7 @@
    IOC Inversion of Control 即控制反转，是指程序将创建对象的控制权转交给Spring框架进行管理，由Spring通过java的反射机制根据配置文件在运行时动态的创建实例，并管理各个实例之间的依赖关系。
 
 ## 2.什么是三级缓存
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151651233.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151651233.png)
 - 第一级缓存：也叫单例池，存放已经经历了完整生命周期的Bean对象。
 - 第二级缓存：存放早期暴露出来的Bean对象，实例化以后，就把对象放到这个Map中。（Bean可能只经过实例化，属性还未填充）。
 - 第三级缓存：存放早期暴露的Bean的工厂。
@@ -231,9 +231,9 @@ public class SpringContext {
 这两个重载方法的区别在于：
 
 `SpringContext(Class<?> config)`构造方法是通过`@ComponentScan`注解来获取包的根路径
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151824800.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151824800.png)
 `SpringContext()`构造方法是通过`config.properties`配置文件中的`scan.dir=com.xichuan.dev`配置来获取包的根路径
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151822194.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151822194.png)
 
 我们可以看出`SpringContext`做了三件事:
 - `loadAllClass()`:获取`packagePath`下的所有class,将所有扫描到的class存放到`classesHashSet`中
@@ -270,7 +270,7 @@ public class SpringContext {
 我们可以看到，此方法的代码非常简单，只是将`packagePath`包路径下的class扫描出来，并存放到`classesHashSet`中;因为代码比较简单，递归获取class的操作就不细说了。
 
 有一点需要注意的是，因为在idea运行与达成jar运行,扫描包的方式不一样,具体代码看此方法:`com.xichuan.framework.core.helper.PackageUtil.getClassName(java.lang.String, boolean)`
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151910741.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151910741.png)
 
 
 

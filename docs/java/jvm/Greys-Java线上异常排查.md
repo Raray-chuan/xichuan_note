@@ -103,7 +103,7 @@ Greys相对于HouseMD、BTrace而言最灵活的地方就是在用表达式来�
    特别指出的是，如果你书写了一个错误的条件表达式，greys为了兼容错误会解析为FALSE。
    以下是一些条件表达式使用的例子和预测结果
    `可以对一些值进行判断，如返回值是否为null`
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101727554.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101727554.png)
 
 **2) 观察表达式**
    观察表达式用在使用表达式表达输出内容的场景，尤其在watch和tt命令中，观察表达式至关重要。
@@ -141,7 +141,7 @@ public class Advice {
 ```
 
 这里列一个表格来说明不同变量的含义
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101731624.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101731624.png)
 所有变量都可以在表达式中直接使用，如果在表达式中编写了不符合OGNL脚本语法或者引入了不在表格中的变量，
 `对条件表达式、检索表达式而言，则一律当成false来处理
 对观察表达式而言，则放弃当前方法调用的处理（不输出）`
@@ -188,7 +188,7 @@ sc -E com\..*StringUtils
 
 ## 3.Greys命令详解
 ### 3.1 命令清单
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101733201.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101733201.png)
 
 
 
@@ -342,7 +342,7 @@ class-pattern／method-pattern，这两个参数为隐性参数，即在输入�
 “Search-Class”的简写，这个命令能搜索出所有已经加载到JVM中的Class信息。
 
 #### 3.3.1 参数说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101735143.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101735143.png)
 
 #### 3.3.2 使用参考
 ```shell
@@ -411,7 +411,7 @@ ga?>
 “Search-Method”的简写，这个命令能搜索出所有已经加载了Class信息的方法信息。
 
 #### 3.4.1 参数说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101736468.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101736468.png)
 
 #### 3.4.2 使用参考
 ```shell
@@ -465,11 +465,11 @@ ga?>
 monitor命令是介绍到的第一个非实时返回命令，实时返回命令是输入之后立即返回，而非实时返回的命令，则是不断的等待目标Java进程返回信息，直到用户输入Ctrl+D为止。服务端是以任务的形式在后台跑任务，植入的代码随着任务的中止而停止执行，所以任务关闭后，不会对原有性能产生太大影响，而且原则上，任何Greys的命令也不会引起任何原有业务逻辑的改变。
 
 #### 3.5.1 监控的维度说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101737372.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101737372.png)
 
 #### 3.5.2 参数说明
 方法拥有一个命名参数[c:]，意思是统计周期（cycle of output），拥有一个整形的参数值
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101737442.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101737442.png)
 
 #### 3.5.3 使用参考
 ```shell
@@ -501,7 +501,7 @@ ga?>
 命令能主动搜索class-pattern／method-pattern所渲染的方法调用路径，渲染和统计整个调用链路上的所有性能开销和追踪调用链路。
 
 #### 3.6.1 参数说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101738274.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101738274.png)
 
 #### 3.6.2 注意事项
 trace能方便的帮助你定位和发现因RT高而导致的性能问题缺陷，但其每次只能跟踪一级方法的调用链路，目前暂时没有精力去解决往下几个层级的调用。如果真有需求可以Issues我。
@@ -534,7 +534,7 @@ Affect(class-cnt:1 , method-cnt:1) cost in 19 ms.
 命令能主动搜索tracing-path-pattern所渲染的路径，渲染和统计整个调用链路上的所有性能开销和追踪调用链路。
 
 #### 3.7.2 参数说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101739533.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101739533.png)
 
 #### 3.7.3 使用例子
 ```shell
@@ -589,7 +589,7 @@ Affect(class-cnt:10 , method-cnt:36) cost in 148 ms.
 
 #### 3.8.1 参数说明
 watch的参数比较多，主要是因为它能在4个不同的场景观察对象
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101740035.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101740035.png)
 这里重点要说明的是观察表达式，观察表达式的构成主要由OGNL表达式组成，所以你可以这样写params[0]+"$"+target，只要是一个合法的OGNL表达式，都能被正常支持。
 观察的维度也比较多，主要体现在参数advice的数据结构上。Advice参数最主要是封装了通知节点的所有信息。参考表达式核心变量中关于该节点的描述:https://github.com/oldmanpushcart/greys-anatomy/wiki/greys-pdf#advice-class。
 
@@ -649,7 +649,7 @@ addressName=@String[ADDRESS],
 此时你可以通过-n参数指定你需要记录的次数，当达到记录次数时greys会主动中断tt命令的记录过程，避免人工操作无法停止的情况。
 
 #### 3.9.2 表格字段说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101743466.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101743466.png)
 
 #### 3.9.3 条件表达式
 不知道大家是否有在使用过程中遇到以下困惑
@@ -823,7 +823,7 @@ ga?>
 很多时候我们都知道一个方法被执行，但这个方法被执行的路径非常多。或者你根本就不知道这个方法是从那里被执行了，正在郁闷，正在彷徨。此时你需要的是stack命令。
 
 #### 3.10.1 参数说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101746721.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101746721.png)
 
 #### 3.10.2 使用例子
 ```
@@ -854,7 +854,7 @@ js命令几经波折，几乎在两个重要版本中绝迹，所以我不得不
 比如我需要查看目标JVM中所有SQL的执行情况，因为java.sql.PreparedStatement在不同的JDBC协议实现下，存储的原生SQL获取的方式也不尽相同，JDBC规范中并未提供标准的API获取原生的SQL。这个时候需要对原生SQL进行统计就必须进行个性化开发。
 
 #### 3.11.1 参数说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101747901.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101747901.png)
 
 #### 3.11.2 使用例子
 **1) 运行第一个JavaScript**
@@ -965,7 +965,7 @@ call from remote script: com.alibaba.AgentTest.printAddress()
 会话命令是在1.6版本之后新增，整个命令的定位是维护好会话级的参数。目前可修改的就一个字符集。
 
 #### 3.16.1 参数说明
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211101750668.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211101750668.png)
 #### 3.16.2 使用例子
 **1) 直接查看会话信息**
 ```

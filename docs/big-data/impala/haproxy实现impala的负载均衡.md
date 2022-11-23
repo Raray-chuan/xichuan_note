@@ -225,7 +225,7 @@ Fetched 1 row(s) in 5.04s
 
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211456379.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211456379.png)
 
 3.同时打开第二个终端访问并执行SQL
 
@@ -259,7 +259,7 @@ Fetched 1 row(s) in 0.03s
 
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211457407.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211457407.png)
 
 通过以上测试可以看到，两个终端执行的SQL不在同一个Impala Daemon，这样就实现了Impala Daemon服务的负载均衡。
 

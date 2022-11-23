@@ -93,7 +93,7 @@ public class TestKerberosImpala {
 
 **1.在我们初始化Hikari Pool参数后，第一次调用`com.zaxxer.hikari.HikariDataSource#getConnection()`的时候**，会进行初始化`HikariPool`，`HikariPool`正式管理Connection的类
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041023830.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041023830.png)
 
 
 
@@ -101,7 +101,7 @@ public class TestKerberosImpala {
 
 **2.进入`com.zaxxer.hikari.pool.HikariPool#HikariPool`类中**，查看`HikariPool`如何初始化连接池的
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041025936.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041025936.png)
 
 `HikariPool`初始化的前面参数先不管，不是研究重点，看红框中，`HikariPool`会初始化一个`HouseKeeper`的线程，`HouseKeeper`的作用的是保持连接池的idle数据在一定的数目
 
@@ -109,19 +109,19 @@ public class TestKerberosImpala {
 
 **3.进入`com.zaxxer.hikari.pool.HikariPool.HouseKeeper`类**，看它如何是保持Connection的数据在一定的数据
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041032475.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041032475.png)
 
 我们可以看到，`HouseKeeper`是一个内部类，继续往下看代码，有一个`fillPool()`方法，看注解，这个方法可以保持连接数在一定数据上
 
 
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041033413.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041033413.png)
 
 
 
 **4.进入`com.zaxxer.hikari.pool.HikariPool#fillPool`方法**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041038452.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041038452.png)
 
 从上图我们可以看出，此方法会判断pool是否需要新添加Connection，如果需要，则在pool中添加Connection。添加Connection方式是提交一个线程，我们直接看`PoolEntryCreator`如何添加Connection即可。下面只会跟踪Hikari最终创建Connection的代码地方，不会解释每个方法以及类的作用
 
@@ -131,33 +131,33 @@ public class TestKerberosImpala {
 
 进入`com.zaxxer.hikari.pool.HikariPool.PoolEntryCreator`类,
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041052352.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041052352.png)
 
 可以看出该线程会创建一个`PoolEntry`类，`PoolEntry`类就是用来保存Connection的.
 
 继续进入`com.zaxxer.hikari.pool.HikariPool#createPoolEntry`方法，看如何创建`PoolEntry`类的
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041053621.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041053621.png)
 
 可以看出，创建`PoolEntry`是通过`newPoolEntry()`方法进行创建的
 
 继续进入`com.zaxxer.hikari.pool.PoolBase#newPoolEntry`方法，看如何创建`PoolEntry`的
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041057564.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041057564.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041058261.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041058261.png)
 
 可以看出`newPoolEntry()`方法创建`PoolEntry`对象，是通过PoolEntry构造方法创建的，进入此构造方法，第一个参数就是`Connection`,那我们就需要进入`newConnection()`方法看此Connection是如何创建的
 
 进入`com.zaxxer.hikari.pool.PoolBase#newConnection`方法
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041101621.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041101621.png)
 
 我们看出Connection的创建是通过`dataSource.getConnection()`来创建的，那这个`dataSource`的实现类是哪个？打断点可以看出是`DriverDataSource`类
 
 进入`com.zaxxer.hikari.util.DriverDataSource#getConnection()`方法，查看Connection是如何创建的
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041105025.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041105025.png)
 
 可以看出创建connection是通过调用impala、mysql、h2等驱动包的接口创建的
 
@@ -405,7 +405,7 @@ public final class DriverDataSource implements DataSource{
 
 HikariCP-4.0.3要求的maven版本是3.3.9，必须使用apache-maven-3.3.9才能打包
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041139423.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041139423.png)
 
 
 
@@ -439,15 +439,15 @@ toolchains.xml文件的内容：
 
 如果打包的时候还是报缺失toolchains.xml文件，可以将此文件放到本地仓库的路径中，如下图：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041143361.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041143361.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041144684.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041144684.png)
 
 
 
 **3.进行package，然后在本地仓库中将HikariCP-4.0.3.jar替换即可**
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211041146913.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211041146913.png)
 
 
 

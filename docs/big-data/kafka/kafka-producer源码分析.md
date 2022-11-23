@@ -55,30 +55,30 @@ public class ProducerTest {
 
 ## 二.Producer初始化流程
 ### 2.1 此时我们先撇开源码不说，先来画个原理图。
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211211141018.png)
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211211144761.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211211141018.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211211144761.png)
 
 
 #### 2.1.1 丢进缓冲区前的操作
 首先我们现在是初始化了一个 `KafkaProducer` 对吧。然后会有一个` ProducerInterceptors` ，看这个英文像是拦截器，它会把我们的消息根据一定的规则去过滤掉。但是这个东西其实作用不大，因为我通过if-else都可以代替它的作用，所以就是比较鸡肋。所以发送消息前会用它进行一个消息的过滤，结束后会对消息进行 `序列化` 。序列化结束，就找到`Partitioner分区器 `（要知道该发送到哪一台服务器上的哪一个分区）进行分区。
 所以我们现在得到的四个关键词是
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211211146313.webp)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211211146313.webp)
 
 #### 2.1.2 缓冲区的结构
 此时发送之前，我们要先把消息放入一个缓冲区里面，那么这个缓冲区其实是叫 `RecordAccumulator `，缓冲区里面会存在多个deque队列。kafka的消息并不是逐条发送的，而是会打包成一个个批次（`每个批次默认16K`）发送。这些队列里面的封装好的消息批次会依次发送给不同的分区（图中仅列出1,2,3），比如下图
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211211146018.webp)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211211146018.webp)
 第一个deque就只负责发送给分区1，第二个deque就仅发送给分区2···依次类推
 
 #### 2.1.3 Sender线程的结构
 真正发送数据的其实就是这个Sender线程，如下图
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211211147008.webp)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211211147008.webp)
 Sender启动起来之后会创建请求ClientRequest，这里的ClientRequest并不是完全一样的。因为发往不同的服务器应该是各种不同的请求。创建请求完成后，会发送给NetWorkClient，它是管理Kafka网络的非常重要的组件。它会在它的里面暂存请求，至于为何需要这样，我们之后说明。
 
 后面的selector里的KafkaChannel其实就是类似于我们在 `NIO` 中所提到的SocketChannel，之后selector会发送消息给Kafka，这个过程是客户端向服务端发送消息，此时服务端，也就是Kafka会再返回响应，这个响应也仍旧是这个KafkaChannel接收，然后返回给NetworkClient，经过处理后返回给客户端。
 
 #### 2.1.4 原理分析总图
 所以整个流程走下来应该就是这样的一张图。图中已经用数字1~12标好流程
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211211150032.webp)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211211150032.webp)
 这个图也是非常非常粗略的一个流程说明，Kafka的源码细节远比这个图来的细致，所以大家看到这里如果觉得似懂非懂也是正常，后面结合源码说明一定能更加清楚。
 
 ### 2.2 KafkaProducer进行初始化源码分析
@@ -295,7 +295,7 @@ KafkaProducer.send方法返回的是一个Future，那么它如何同时实现bl
 - `blocking`：在调用send返回Future时，立即调用get，因为Future.get在没有返回结果时会一直阻塞
   - 内部调用的是`FutureRecordMetadata`的`CountDownLatch.wait()`,当完成或失败后会在回调函数执行完后进行countdown
 - `non-block`：提供一个callback,调用send后，可以继续发送消息而不用等待。当有结果返回时，callback会被自动通知执行
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211211153917.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211211153917.png)
 
 
 
@@ -399,7 +399,7 @@ Producer 通过 `waitOnMetadata()` 方法来获取对应 topic 的 metadata 信�
 #### 3.3.2 key 和 value 的序列化
 
 Producer 端对 record 的 `key` 和 `value` 值进行序列化操作，在 Consumer 端再进行相应的反序列化，Kafka 内部提供的序列化和反序列化算法如下图所示：
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211211155010.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211211155010.png)
 当然我们也是可以自定义序列化的具体实现，不过一般情况下，Kafka 内部提供的这些方法已经足够使用。
 
 
@@ -464,12 +464,12 @@ public int partition(String topic, Object key, byte[] keyBytes, Object value, by
 #### 3.3.4 向 accumulator 写数据
 
 由于生产者发送消息是异步地，所以可以将多条消息缓存起来，等到一定时机批量地写入到Kafka集群中，`RecordAccumulator`就扮演了缓冲者的角色。生产者每生产一条消息，就向accumulator中追加一条消息，并且要返回本次追加是否导致batch满了，如果batch满了，则开始发送这一批数据。最开始以为`Deque<RecordBatch>`就是一个消息队列，实际上一批消息会首先放在`RecordBatch`中，然后Batch又放在`双端队列`中。
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211220918590.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211220918590.png)
 
 Producer 会先将 record 写入到 buffer 中，当达到一个 batch.size 的大小时，再唤起 `sender` 线程去发送` RecordBatch`（第五步），这里先详细分析一下 Producer 是如何向 buffer 中写入数据的。
 
 Producer 是通过 `RecordAccumulator` 实例追加数据，RecordAccumulator 模型如下图所示，一个重要的变量就是 `ConcurrentMap<TopicPartition, Deque<RecordBatch>> batches`，每个 `TopicPartition` 都会对应一个 `Deque<RecordBatch>`，当添加数据时，会向其 topic-partition 对应的这个 queue 最新创建的一个 `RecordBatch` 中添加 record，而发送数据时，则会先从 queue 中最老的那个 `RecordBatch` 开始发送。
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211220919687.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211220919687.png)
 Producer RecordAccumulator 模型
 ```java
 // org.apache.kafka.clients.producer.internals.RecordAccumulator
@@ -525,7 +525,7 @@ Producer RecordAccumulator 模型
     }
 ```
 总结一下其 record 写入的具体流程如下图所示：
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211220920016.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211220920016.png)
 `Producer RecordAccumulator record 写入流程`:
 - 获取该 topic-partition 对应的 queue，没有的话会创建一个空的 queue；
 - 向 queue 中追加数据，先获取 queue 中最新加入的那个 RecordBatch，如果不存在或者存在但剩余空余不足以添加本条 record 则返回 null，成功写入的话直接返回结果，写入成功；
@@ -1043,7 +1043,7 @@ Metadata 会在下面两种情况下进行更新
 ## 五.Sender线程流程
 ### 5.1 Producer 的网络模型
 KafkaProducer 通过 Sender 进行相应的 IO 操作，而 Sender 又调用 NetworkClient 来进行 IO 操作，NetworkClient 底层是对 Java NIO 进行相应的封装，其网络模型如下图所示
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211220927656.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211220927656.png)
 
 从图中可以看出，Sender 为最上层的接口，即调用层，Sender 调用 NetworkClient，NetworkClient 调用 Selector，而 Selector 底层封装了 Java NIO 的相关接口，从右边的图也可以看出它们之间的关系。
 
@@ -1052,12 +1052,12 @@ KafkaProducer 通过 Sender 进行相应的 IO 操作，而 Sender 又调用 Net
 ### 5.2  RecordAccumulator 类
 
 我们看下`RecordAccumulator`中方法，在`Producer的send流程`中已经提到过了，我们在Sender的流程中，会提到read()与drain()方法
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211220928494.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211220928494.png)
 
 
 ### 5.2 Producer 整体流程
 有了对 Producer 网络模型的大概框架认识之后，下面再深入进去，看一下它们之间的调用关系以及 Producer 是如何调用 Java NIO 的相关接口，Producer 端的整体流程如下图所示。
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211220929055.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211220929055.png)
 这里涉及到的主要方法是：
 - `KafkaProducer.dosend()`；--上面已经讲过
 - `Sender.run()`；
@@ -1470,7 +1470,7 @@ public List<RecordBatch> abortExpiredBatches(int requestTimeout, long now) {
     }
 ```
 那我们获取到了超时的producerBatch后，在`expiredBatches`方法后会进行处理
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211220935798.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211220935798.png)
 我们看下`failBatch`方法
 
 
@@ -1687,7 +1687,7 @@ private boolean send(Send send) throws IOException {
 当以上步骤的执行结束时，接下来即可返回到sender线程类的run()方法的`sendProduceRequests(batches, now)`方法，该方法执行结束，此时为每个broker的kafkaChannel都绑定了各自的NetworkSend。最后调用`this.client.poll(pollTimeout, now);`方法将消息发送出去。
 
 现在对于客户端而言，连接、读、写事件都有了（`CONNECT、READ、WRITE`）。在selector的轮询中可以操作读写事件。
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211220937911.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211220937911.png)
 
 
 下面我们看下`NetworkClient#poll(long timeout, long now)`

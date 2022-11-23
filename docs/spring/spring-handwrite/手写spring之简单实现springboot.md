@@ -27,7 +27,7 @@ MVC 设计模式一般指 MVC 框架，M（Model）指数据模型层，V（View
 
 
 **Spring MVC核心架构:**
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211171154436.jpg)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211171154436.jpg)
 核心架构的具体流程步骤如下：
 
 1、  首先用户发送请求——>DispatcherServlet，前端控制器收到请求后自己不进行处理，而是委托给其他的解析器进行处理，作为统一访问点，进行全局的流程控制；

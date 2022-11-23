@@ -71,11 +71,11 @@
 
   - 其本质是将SQL转换为MapReduce的任务进行运算，底层由HDFS来提供数据的存储支持，说白了hive可以理解为一个将SQL转换为MapReduce任务的工具，甚至更进一步可以说hive就是一个MapReduce的客户端
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151002124.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151002124.png)
 
 ### 2.2 Hive与数据库的区别
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151003499.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151003499.png)
 
 - Hive 具有 SQL 数据库的外表，但应用场景完全不同。
 
@@ -104,7 +104,7 @@
 
 ### 2.4 Hive架构原理
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151003199.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151003199.png)
 
 - 1、用户接口：Client
 
@@ -134,7 +134,7 @@
 
     - 执行器（Execution）：把逻辑执行计划转换成可以运行的**物理计划**。对于Hive来说默认就是mapreduce任务
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151004471.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151004471.png)
 
 
 
@@ -174,7 +174,7 @@
 [hadoop@node03 ~]$ nohup hive --service hiveserver2 &
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151004906.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151004906.png)
 
 - beeline连接hiveserver2服务
 
@@ -188,7 +188,7 @@ beeline> !connect jdbc:hive2://node03:10000
 
   	用户名hadoop，密码为空即可
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211150959838.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211150959838.png)
 
 - 帮助信息
 
@@ -196,7 +196,7 @@ beeline> !connect jdbc:hive2://node03:10000
 0: jdbc:hive2://node03:10000> help
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151005458.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151005458.png)
 
 - 退出
 
@@ -425,7 +425,7 @@ select * from stu2;
 hive > desc formatted myhive.stu;
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151007600.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151007600.png)
 
 - hql示例：创建内部表并指定字段之间的分隔符，指定文件的存储格式，以及数据存放的位置
 
@@ -451,7 +451,7 @@ row format delimited fields terminated by '\t';
   - 指定就是数据存放的具体目录
   - 不指定就是使用默认目录 `/user/hive/warehouse`
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151008518.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151008518.png)
 
 - 向外部表当中加载数据：
   - 我们前面已经看到过通过insert的方式向内部表当中插入数据，外部表也可以通过insert的方式进行插入数据，只不过insert的方式，我们一般都不推荐
@@ -523,7 +523,7 @@ alter table teacher set tblproperties('EXTERNAL'='FALSE');
 
 
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151008977.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151008977.png)
 
 
 
@@ -760,7 +760,7 @@ public class HiveJDBC {
     !ls /home;
     ```
 
-    ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151009373.png)
+    ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151009373.png)
 * hive cli命令窗口查看HDFS文件系统
   * 与查看HDFS文件系统类似
 
@@ -768,7 +768,7 @@ public class HiveJDBC {
   dfs -ls /user;
   ```
 
-    ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151009688.png)
+    ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151009688.png)
 
 * hive的底层执行引擎有3种
   * mapreduce(默认)

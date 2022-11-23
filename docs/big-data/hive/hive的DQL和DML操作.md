@@ -2,7 +2,7 @@
 
 ## 1. Hive的分桶表
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151025716.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151025716.png)
 
 ### 1.1 分桶表原理
 
@@ -81,7 +81,7 @@ insert into table user_buckets_demo select * from user_demo;
 
 - hdfs上查看表的数据目录
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151028446.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151028446.png)
 
 - 抽样查询桶表的数据
   - [官网地址](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Sampling)
@@ -371,7 +371,7 @@ hive> insert into table order_dynamic_partition partition(order_time) select ord
 hive> show partitions order_dynamic_partition;
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151028427.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151028427.png)
 
 
 
@@ -388,7 +388,7 @@ hive> show partitions order_dynamic_partition;
 > hive> insert into table order_dynamic_partition1 partition(year='2019', month='03', day) select order_number, order_price, day(order_time) from t_order where year(order_time)`'2019' and month(order_time)`'03';
 > ```
 >
-> ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151029791.png)
+> ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151029791.png)
 
 ## 5. Hive的查询语法
 
@@ -769,6 +769,6 @@ select * from score where s_score > 60;
 
 
 - 总结  
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151029660.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151029660.png)
 
 

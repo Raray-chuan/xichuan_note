@@ -17,7 +17,7 @@ scala大概是在2003年才正式诞生，而java的诞生可以追溯到1995年
 * 表达能力强，一行代码抵得上Java多行，开发速度快
 * 兼容Java，可以访问庞大的Java类库
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180941750.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180941750.png)
 
 
 
@@ -27,11 +27,11 @@ scala大概是在2003年才正式诞生，而java的诞生可以追溯到1995年
 
   * Java程序编译执行流程
 
-    ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180942500.png)
+    ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180942500.png)
 
   * Scala程序编译执行流程
 
-    ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180942736.png)
+    ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180942736.png)
 
 * scala程序运行需要依赖于Java类库，必须要有**`Java运行环境`**，scala才能正确执行
 
@@ -61,7 +61,7 @@ scala SDK是scala语言的编译器，要开发scala程序，必须要先安装S
     * 下载安装包
       * `scala-2.11.8.zip`
 
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180942040.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180942040.png)
 
 * 在window在配置scala SDK，并配置好环境变量
 
@@ -75,7 +75,7 @@ IDEA默认是不支持scala程序开发，所以需要来安装scala插件来支
 
 * 1、查看IDEA版本
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180943061.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180943061.png)
 
 
 
@@ -91,9 +91,9 @@ IDEA默认是不支持scala程序开发，所以需要来安装scala插件来支
 
 * 3、点击File ，再点击Settings
 
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180944658.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180944658.png)
 
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180944911.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180944911.png)
 
 
 
@@ -119,7 +119,7 @@ IDEA默认是不支持scala程序开发，所以需要来安装scala插件来支
   - 按住`windows键 + r`
   - 输入`scala`即可
 
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180945763.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180945763.png)
 
 * 退出scala解释器
 
@@ -135,17 +135,17 @@ IDEA默认是不支持scala程序开发，所以需要来安装scala插件来支
 
   新建工程
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180946835.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180946835.png)
 
 选择maven工程
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180946999.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180946999.png)
 
 
 
 填写groupId和Artifact并选择工程存放位置
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180947501.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180947501.png)
 
 
 
@@ -220,13 +220,13 @@ IDEA默认是不支持scala程序开发，所以需要来安装scala插件来支
 
 maven工程添加scala代码保存的source 文件夹
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180947230.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180947230.png)
 
 
 
 创建scala的workSheet
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180948172.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180948172.png)
 
 
 
@@ -260,7 +260,7 @@ val/var 变量名称:变量类型 = 初始值
    val c = 20
   ~~~
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180949553.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180949553.png)
 
 
 
@@ -308,7 +308,7 @@ val/var 变量名称:变量类型 = 初始值
 
 * scala类型层次结构
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180950424.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180950424.png)
 
 
 
@@ -351,7 +351,7 @@ scala> val k=if(x<0) -1 else if (x==0) 0 else 1
 k: Int = 1
 ~~~
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180951336.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180951336.png)
 
 
 
@@ -368,7 +368,7 @@ scala> 1.+(2)
 
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180951747.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180951747.png)
 
 
 
@@ -388,7 +388,7 @@ val result={
 //后期一个方法的返回值不需要加上return,把要返回的结果放在方法的最后一行就可以了 
 ~~~
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180928132.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180928132.png)
 
 * 在scala解释器中先输入 `:paste` ,然后写多行代码, 之后按`=ctrl+d`结束输入
 
@@ -549,7 +549,7 @@ def methodName (参数名:参数类型, 参数名:参数类型) : [return type] 
 }
 ~~~
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180952835.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180952835.png)
 
 示例一：定义一个最标准的方法，且定义方法的返回值类型为Int类型
 
@@ -775,7 +775,7 @@ Scala优先采用不可变集合，对于几乎所有的集合类，Scala都同�
 
 
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180952938.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180952938.png)
 
 
 
@@ -785,7 +785,7 @@ Scala优先采用不可变集合，对于几乎所有的集合类，Scala都同�
 
 
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180952255.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180952255.png)
 
 
 
@@ -2121,7 +2121,7 @@ val a = Array(1,2,3,4)
 * 这种写法非常简便，不需要再写一个new，然后敲一个空格，再写类名。如何直接使用类名来创建对象呢？
 * 查看scala源代码：
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180954123.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180954123.png)
 
 
 
@@ -2924,13 +2924,13 @@ object CaseDemo05 extends App{
 
     * Some包装了某个值
 
-    ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211180959428.png)
+    ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211180959428.png)
 
   * 一个是None
 
     * None表示没有值
 
-    ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211181000595.png)
+    ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211181000595.png)
 
 * 示例
 
@@ -3081,9 +3081,9 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
   * `unapply方法算是apply方法的反向操作`
     * unapply接受一个对象，然后从对象中提取值，提取的值通常是用来构造该对象的值。
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211181000888.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211181000888.png)
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211181001839.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211181001839.png)
 
 * `示例`
 
@@ -3223,7 +3223,7 @@ object Pair1 {
 
 * `示例二`
 
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211181002361.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211181002361.png)
 
 ~~~scala
 
@@ -3287,7 +3287,7 @@ object Pair {
   class Pair[T]{}，这种情况就是非变（默认），类型B是A的子类型，Pair[A]和Pair[B]没有任何从属关系，这种情况和Java是一样的。
   ~~~
 
-  ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211181002488.png)
+  ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211181002488.png)
 
 * `示例`
 

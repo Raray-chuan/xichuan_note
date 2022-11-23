@@ -208,7 +208,7 @@ java.lang.Thread.State: TIMED_WAITING (parking或sleeping)：定时的，那个�
 **2）Waiting for Monitor Entry 和 in Object.wait()：** The thread is waiting to get the lock for an object (some other thread may be holding the lock). This happens if two or more threads try to execute synchronized code. Note that the lock is always for an object and not for individual methods.
 
 在多线程的JAVA程序中，实现线程之间的同步，就要说说 Monitor。 Monitor是Java中用以实现线程之间的互斥与协作的主要手段，它可以看成是对象或者Class的锁。每一个对象都有，也仅有一个 Monitor。下面这个图，描述了线程和 Monitor之间关系，以及线程的状态转换图：
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211111139062.webp)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211111139062.webp)
 如上图，每个Monitor在某个时刻，只能被一个线程拥有，该线程就是 “ActiveThread”，而其它线程都是 “Waiting Thread”，分别在两个队列“Entry Set”和“Wait Set”里等候。在“Entry Set”中等待的线程状态是“Waiting for monitor entry”，而在“Wait Set”中等待的线程状态是“in Object.wait()”。
 
 先看“Entry Set”里面的线程。我们称被 synchronized保护起来的代码段为临界区。当一个线程申请进入临界区时，它就进入了“Entry Set”队列。对应的 code就像：
@@ -524,4 +524,4 @@ which is held by "Thread-1"
 
 ## 4 JVM重要线程
 JVM运行过程中产生的一些比较重要的线程罗列如下：
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211111354920.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211111354920.png)

@@ -35,7 +35,7 @@ Kerberos服务是单点登录系统，这意味着您对于每个会话只需向
 
 ## 三. Kerberos认证流程
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202210211128163.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202210211128163.png)
 
 （１）客户端执行kinit命令，输入Principal及Password，向AS证明身份，并请求获取TGT。
 （２）AS检查Database中是否存有客户端输入的Principal，如有则向客户端返回TGT。

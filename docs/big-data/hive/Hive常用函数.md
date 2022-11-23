@@ -10,7 +10,7 @@
 [hadoop@node03 ~]$ hive -help
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151138157.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151138157.png)
 
 语法结构:
 
@@ -118,7 +118,7 @@ hive --hiveconf "mapred.job.queue.name=root.default" -d my="201912" --database m
 hive > select * from myhive.score2 where concat(year, month) = ${my} limit 5;
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151140733.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151140733.png)
 
 #### 1.3.4 hiveconf与hivevar使用实战
 
@@ -199,7 +199,7 @@ score.s_id      score.c_id      score.s_score   score.month
 hive --hiveconf month=201912 --hivevar s_score=80 --hivevar c_id=03  -f /opt/install/hivedatas/hivevariable.hql
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151140432.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151140432.png)
 
 
 
@@ -658,7 +658,7 @@ v1
 hive> select  get_json_object('{"store":{"fruit":\[{"weight":8,"type":"apple"},{"weight":9,"type":"pear"}], "bicycle":{"price":19.95,"color":"red"} },"email":"amy@only_for_json_udf_test.net","owner":"amy"}','$.owner') from tableName;
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151141177.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151141177.png)
 
 #### 2.5.12 重复字符串函数：repeat 
 
@@ -787,7 +787,7 @@ select name,size(score) from score_map;
 select map(1, 'zs', 2, 'lisi');
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151142672.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151142672.png)
 
 #### 2.7.2 Struct类型构建: struct
 
@@ -825,7 +825,7 @@ OK
 select struct(1, 'anzhulababy', 'moon', 1.68);
 ```
 
-![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151142649.png)
+![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151142649.png)
 
 #### 2.7.3 Array类型构建: array
 
@@ -1187,7 +1187,7 @@ hive (hive_explode)> select explode(split(area, ',')) as area from hive_explode.
 hive (hive_explode)> select explode(split(regexp_replace(regexp_replace(sale_info,'\\[\\{',''),'}]',''),'},\\{')) as sale_info from hive_explode.explode_lateral_view;
 ```
 
- ![](https://raw.githubusercontent.com/Raray-chuan/xichuan_blog_pic/main/img/202211151143251.png)
+ ![](https://gcore.jsdelivr.net/gh/Raray-chuan/xichuan_blog_pic@main/img/202211151143251.png)
 
 - 然后我们想用get_json_object来获取key为monthSales的数据：
 
